@@ -2,7 +2,7 @@ class SegmentTree:
     def __init__(self, arr):
         self.arr = arr
         self.n = len(arr)
-        self.tree = [0] * (4 * self.n)  # Using a size of 4 times the array size for simplicity
+        self.tree = [0] * (4 * self.n) 
 
     def build(self, node, start, end):
         if start == end:
@@ -55,6 +55,6 @@ class SegmentTree:
 arr = [1, 3, 5, 7, 9, 11]
 segment_tree = SegmentTree(arr)
 segment_tree.build_tree()
-print(segment_tree.query_tree(1, 4))  # Output: 24 (sum of elements from index 1 to 4)
-segment_tree.update_tree(2, 10)  # Update the value at index 2 to 10
-print(segment_tree.query_tree(1, 4))  # Output: 28 (updated sum of elements from index 1 to 4)
+print(segment_tree.query_tree(1, 4))  
+segment_tree.update_tree(2, 10)  
+print(segment_tree.query_tree(1, 4))
